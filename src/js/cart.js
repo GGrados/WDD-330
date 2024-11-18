@@ -1,4 +1,4 @@
-import { getLocalStorage } from "./utils.mjs";
+import { getLocalStorage, getMenucartLogo } from "./utils.mjs";
 
 function renderCartContents() {
   const cartItems = getLocalStorage("so-cart");
@@ -33,3 +33,6 @@ function cartItemTemplate(item) {
 }
 
 renderCartContents();
+
+// Get the logo cart with the number of elements in cart
+getMenucartLogo(".cart");
