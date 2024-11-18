@@ -32,7 +32,7 @@ export function getParams(param) {
 
 //Render List
 
-function renderListWithTemplate(templateFn, parentElement, list, position = "afterbegin", clear = false
+export function renderListWithTemplate(templateFn, parentElement, list, position = "afterbegin", clear = false
 ){
   const htmlStrings = list.map(templateFn);
   if (clear) {
