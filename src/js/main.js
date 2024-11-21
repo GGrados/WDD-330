@@ -13,12 +13,10 @@ import { getMenucartLogo } from "./utils.mjs";
 
 const listElement = document.querySelector(".product-list");
 
-const producData = new ProductData("tents");  
+const producData = new ProductData("tents");
 
-const productList = new ProductListing("tents", producData,listElement);
+const productList = new ProductListing("tents", producData, listElement);
 productList.init();
 
 // Get the logo cart with the number of elements in cart
 getMenucartLogo(".cart");
-
-

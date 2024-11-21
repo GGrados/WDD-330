@@ -222,17 +222,16 @@ footer {
 }
 /* banner for signup and giveaway*/
 div#banner {
-  background-color: red; 
+  background-color: red;
   font-size: x-large;
   text-align: center;
   grid-column: 1/5;
   min-width: 100%;
 }
-=======
-.cart{
+.cart {
   position: relative;
 }
-.cart .cart-number{
+.cart .cart-number {
   display: block;
   position: absolute;
   font-size: 1rem;
