@@ -228,3 +228,20 @@ div#banner {
   grid-column: 1/5;
   min-width: 100%;
 }
+=======
+.cart{
+  position: relative;
+}
+.cart .cart-number{
+  display: block;
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 1rem;
+  background-color: rgb(229, 170, 114);
+  right: -1px;
+  top: 10px;
+  cursor: default;
+}
