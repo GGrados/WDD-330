@@ -40,6 +40,7 @@ export default class ProductDetails {
     products.push(this.product);
     setLocalStorage("so-cart", products);
     alert("Item added to cart!!!");
+    location.reload();
   }
   renderProductDetails(selector) {
     const element = document.querySelector(selector);

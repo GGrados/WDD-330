@@ -17,10 +17,9 @@ export function setLocalStorage(key, data) {
 export function getParam(param) {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  const product = urlParams.get(param)
+  const product = urlParams.get(param);
   return product;
 }
-
 
 // set a listener for both touchend and click
 export function setClick(selector, callback) {
@@ -31,24 +30,15 @@ export function setClick(selector, callback) {
   qs(selector).addEventListener("click", callback);
 }
 
+//Render List
+
 export function renderListWithTemplate(
   templateFn,
   parentElement,
   list,
   position = "afterbegin",
-  clear = false
+  clear = false,
 ) {
-  const htmlStrings = list.map(templateFn);
-  if (clear) {
-    parentElement.innerHTML = "";
-  }
-  parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
-}
-
-//Render List
-
-export function renderListWithTemplate(templateFn, parentElement, list, position = "afterbegin", clear = false
-){
   const htmlStrings = list.map(templateFn);
   if (clear) {
     parentElement.innerHTML = "";
@@ -58,7 +48,7 @@ export function renderListWithTemplate(templateFn, parentElement, list, position
 
 // Render menu cart logo
 
-export function getMenucartLogo(querySelector){
+export function getMenucartLogo(querySelector) {
   // get number of items in the cart
   const items = getLocalStorage("so-cart");
   const numItems = items.length | 0;
@@ -93,9 +83,7 @@ export function getMenucartLogo(querySelector){
             <!-- <text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Natalia Woodroffe</text>
             <text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text> -->
           </svg>
-        </a>`; 
-        const htmlElement = document.querySelector(querySelector);
-        htmlElement.innerHTML = htmlLogoCart;
+        </a>`;
+  const htmlElement = document.querySelector(querySelector);
+  htmlElement.innerHTML = htmlLogoCart;
 }
-
-
