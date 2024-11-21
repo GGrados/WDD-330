@@ -220,7 +220,7 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
-
+/* banner for signup and giveaway*/
 div#banner {
   background-color: red;
   font-size: x-large;
@@ -228,7 +228,6 @@ div#banner {
   grid-column: 1/5;
   min-width: 100%;
 }
-
 .cart {
   position: relative;
 }

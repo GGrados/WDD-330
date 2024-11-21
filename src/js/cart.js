@@ -1,11 +1,18 @@
-import { getLocalStorage } from "./utils.mjs";
+import { getLocalStorage, getMenucartLogo } from "./utils.mjs";
 
 function renderCartContents() {
   const cartItems = getLocalStorage("so-cart");
-  const htmlItems = cartItems.map((item) => cartItemTemplate(item));
-  document.querySelector(".product-list").innerHTML = htmlItems.join("");
+  let htmlItems;
+  if (cartItems != null && cartItems.length != 0) {
+    htmlItems = cartItems.map((item) => cartItemTemplate(item));
+    document.querySelector(".product-list").innerHTML = htmlItems.join("");
+  } else {
+    document.querySelector(".product-list").innerHTML = cartEmtyTemplate();
+  }
 }
-
+function cartEmtyTemplate() {
+  return `<h2>The cart is empty. Please select some products first</h1>`;
+}
 function cartItemTemplate(item) {
   const newItem = `<li class="cart-card divider">
   <a href="#" class="cart-card__image">
@@ -26,3 +33,6 @@ function cartItemTemplate(item) {
 }
 
 renderCartContents();
+
+// Get the logo cart with the number of elements in cart
+getMenucartLogo(".cart");
