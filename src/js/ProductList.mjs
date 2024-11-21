@@ -1,4 +1,3 @@
-
 import { renderListWithTemplate } from "./utils.mjs";
 
 function productCardTemplate(product) {
@@ -14,21 +13,6 @@ function productCardTemplate(product) {
 </li>`;
 }
 
-export default class ProductList {
-  constructor(category, dataSource, listElement) {
-=======
-import {renderListWithTemplate} from "./utils.mjs"
-function productCardTemplate(product) {
-  return `<li class="product-card">
-    <a href="product_pages/index.html?product=${product.Id}">
-      <img src="${product.Image}" alt="Image of ">
-      <h3 class="card__brand">${product.Brand.Name}</h3>
-      <h2 class="card__name">${product.NameWithoutBrand}</h2>
-      <p class="product-card__price">${product.ListPrice}</p>
-    </a>
-  </li>`
-}
-
 export default class ProductListing {
   constructor(category, dataSource, listElement) {
 
@@ -40,22 +24,10 @@ export default class ProductListing {
    
     const list = await this.dataSource.getData();
     this.renderList(list);
-=======
-    //render 
-    this.renderList(list);
 
   }
   
   renderList(list) {
   renderListWithTemplate(productCardTemplate, this.listElement, list);
   }
-
-
-  renderList(list) {
-    renderListWithTemplate(productCardTemplate, this.listElement, list);
-  }
 }
-
-
- 
-
