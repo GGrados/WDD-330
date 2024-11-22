@@ -1,3 +1,4 @@
+import Alert from "./Alert";
 import ProductData from "./ProductData.mjs";
 
 import ProductList from "./ProductList.mjs";
@@ -20,3 +21,7 @@ productList.init();
 
 // Get the logo cart with the number of elements in cart
 getMenucartLogo(".cart");
+
+const listAlert = new Alert;
+listAlert.getAlerts();
+
