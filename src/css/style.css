@@ -244,3 +244,24 @@ div#banner {
   top: 10px;
   cursor: default;
 }
+
+.category-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+}
+.category-icons a {
+  flex: 1 1;
+  
+  max-width: 150px;
+  
+  text-align: center;
+  
+}
+
+.category-icons a img {
+  width: 100%;
+  height: auto;
+}
