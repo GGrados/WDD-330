@@ -56,6 +56,33 @@ header {
   bottom: -10px;
   background-color: white;
 }
+/* banner for signup and giveaway*/
+.log_banner {
+  display: block; /* none to make Hidden by default */ 
+  position: relative;
+  width: 100%; 
+  background-color: #f0a868; 
+  color: #303030; 
+  text-align: justify; 
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  z-index: 1000; 
+  } 
+  .banner p { 
+    margin: 0;
+   } 
+  #closeBanner { 
+    background-color: #525b0f; 
+    border: none; 
+    color: white; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    margin-left: 20px; 
+    } 
+  .banner button:hover { 
+    background-color: #ff1f1f; 
+  }
+
 .logo--square {
   font-size: var(--small-font);
   width: 110px;
@@ -108,6 +135,21 @@ button {
 }
 .cart:hover svg {
   fill: gray;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-30px);
+  }
+  60% {
+      transform: translateY(-15px);
+  }
+}
+
+.animate {
+  animation: bounce 0.6s;
 }
 
 /* End cart icon styles */
@@ -220,14 +262,7 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
-/* banner for signup and giveaway*/
-div#banner {
-  background-color: red;
-  font-size: x-large;
-  text-align: center;
-  grid-column: 1/5;
-  min-width: 100%;
-}
+
 .cart {
   position: relative;
 }
