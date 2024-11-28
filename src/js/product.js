@@ -1,4 +1,4 @@
-import { getParam, loadHeaderAndFooter } from "./utils.mjs";
+import { getParam, loadHeaderFooter } from "./utils.mjs";
 import ProductData from "./ProductData.mjs";
 import ProductDetails from "./ProductDetails.mjs";
 
@@ -10,7 +10,7 @@ product.init();
 
 
 // Get header and footer
-loadHeaderAndFooter();
+loadHeaderFooter();
 
 // Animated cart with add to cart
 document.querySelector('.addtoCart').addEventListener('click', function() {

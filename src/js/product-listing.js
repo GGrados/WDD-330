@@ -1,18 +1,11 @@
+import { loadHeaderFooter, getParam } from "./utils.mjs";
 import ProductData from "./ProductData.mjs";
 import ProductList from "./ProductList.mjs";
-import { getParam, loadHeaderAndFooter } from "./utils.mjs";
 
-// Get header and footer
-loadHeaderAndFooter();
-
+loadHeaderFooter();
 const category = getParam("category");
+const dataSource = new ProductData();
+const element = document.querySelector(".product-list");
+const listing = new ProductList(category, dataSource, element);
 
-const listElement = document.querySelector(".product-list");
-
-const producData = new ProductData();
-
-const productList = new ProductList(category, producData, listElement);
-
-document.getElementById("title-products").innerHTML =
-  `Top Products: ${category.charAt(0).toUpperCase() + category.slice(1)}`;
-productList.init();
+listing.init();

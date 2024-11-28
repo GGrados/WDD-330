@@ -1,8 +1,8 @@
-import { loadHeaderAndFooter } from "./utils.mjs";
+import { loadHeaderFooter } from "./utils.mjs";
 import Alert from "./Alert.js";
 
 // Get header and footer
-loadHeaderAndFooter();
+loadHeaderFooter();
 
 const listAlert = new Alert();
 listAlert.getAlerts();
