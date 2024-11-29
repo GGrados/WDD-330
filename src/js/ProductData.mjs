@@ -5,7 +5,8 @@ function convertToJson(res) {
     throw new Error("Bad Response");
   }
 }
-const baseURL = import.meta.env.VITE_SERVER_URL;
+const baseURL =
+  import.meta.env.VITE_SERVER_URL ?? "https://wdd330-backend.onrender.com/";
 export default class ProductData {
   async getData(category) {
     const response = await fetch(baseURL + `products/search/${category}`);
