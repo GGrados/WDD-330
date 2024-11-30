@@ -13,14 +13,14 @@ product.init();
 loadHeaderAndFooter();
 
 // Animated cart with add to cart
-document.querySelector('.addtoCart').addEventListener('click', function() {
-    const cartThumbnail = document.querySelector('.cart');
+document.querySelector(".addtoCart").addEventListener("click", function() {
+    const cartThumbnail = document.querySelector(".cart");
    
     // Add animation class
-    cartThumbnail.classList.add('animate');
+    cartThumbnail.classList.add("animate");
 
     // Remove animation class after animation ends
-    cartThumbnail.addEventListener('animationend', function() {
-        cartThumbnail.classList.remove('animate');
+    cartThumbnail.addEventListener("animationend", function() {
+        cartThumbnail.classList.remove("animate");
     });
 });
