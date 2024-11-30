@@ -58,30 +58,30 @@ header {
 }
 /* banner for signup and giveaway*/
 .log_banner {
-  display: block; /* none to make Hidden by default */ 
+  display: block; /* none to make Hidden by default */
   position: relative;
-  width: 100%; 
-  background-color: #f0a868; 
-  color: #303030; 
-  text-align: justify; 
+  width: 100%;
+  background-color: #f0a868;
+  color: #303030;
+  text-align: justify;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-  z-index: 1000; 
-  } 
-  .banner p { 
-    margin: 0;
-   } 
-  #closeBanner { 
-    background-color: #525b0f; 
-    border: none; 
-    color: white; 
-    padding: 10px 20px; 
-    cursor: pointer; 
-    margin-left: 20px; 
-    } 
-  .banner button:hover { 
-    background-color: #ff1f1f; 
-  }
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.banner p {
+  margin: 0;
+}
+#closeBanner {
+  background-color: #525b0f;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.banner button:hover {
+  background-color: #ff1f1f;
+}
 
 .logo--square {
   font-size: var(--small-font);
@@ -137,14 +137,18 @@ button {
   fill: gray;
 }
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
   }
   40% {
-      transform: translateY(-30px);
+    transform: translateY(-30px);
   }
   60% {
-      transform: translateY(-15px);
+    transform: translateY(-15px);
   }
 }
 
@@ -279,7 +283,9 @@ footer {
   top: 10px;
   cursor: default;
 }
-.alert-list p{padding: 1rem;}
+.alert-list p {
+  padding: 1rem;
+}
 
 .category-icons {
   display: flex;
@@ -290,11 +296,10 @@ footer {
 }
 .category-icons a {
   flex: 1 1;
-  
+
   max-width: 150px;
-  
+
   text-align: center;
-  
 }
 
 .category-icons a img {

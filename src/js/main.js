@@ -17,4 +17,3 @@ listAlert.getAlerts();
          closeButton.addEventListener("click", function() { 
             banner.style.display = "none"; }); });*/
 //this was supposed to make it only show on first time, but I have a hard time testing it seems to just get rid of the banner
-

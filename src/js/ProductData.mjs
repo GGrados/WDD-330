@@ -6,7 +6,7 @@ function convertToJson(res) {
   }
 }
 const baseURL =
-  import.meta.env.VITE_SERVER_URL ?? "https://wdd330-backend.onrender.com/";
+  import.meta.env.VITE_SERVER_URL ?? "https://wdd330-backend.onrender.com/checkout";
 export default class ProductData {
   async getData(category) {
     const response = await fetch(baseURL + `products/search/${category}`);

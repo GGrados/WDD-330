@@ -34,6 +34,5 @@ function cartItemTemplate(item) {
 
 renderCartContents();
 
-
 // Get header and footer
 loadHeaderAndFooter();
