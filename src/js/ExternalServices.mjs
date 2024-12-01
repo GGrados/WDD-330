@@ -7,7 +7,8 @@ function convertToJson(res) {
 }
 const baseURL =
   import.meta.env.VITE_SERVER_URL ?? "https://wdd330-backend.onrender.com/checkout";
-export default class ProductData {
+
+  export default class ExternalServices {
   async getData(category) {
     const response = await fetch(baseURL + `products/search/${category}`);
     const data = await convertToJson(response);
