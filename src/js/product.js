@@ -10,5 +10,3 @@ product.init();
 
 // Get header and footer
 loadHeaderAndFooter();
-
-
