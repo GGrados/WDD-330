@@ -306,3 +306,30 @@ footer {
   width: 100%;
   height: auto;
 }
+
+.hide {
+  display: none !important;
+}
+
+.cart-footer {
+  display: flex;
+}
+
+.cart-footer .cart-total {
+  font-size: 2rem;
+}
+
+.cart-footer button {
+  font-weight: 700;
+  transition: all .2s;
+}
+
+.cart-footer button:hover {
+  background-color: var(--primary-color);
+  color: var(--dark-grey);
+}
+
+.cart-footer button:active {
+  background-color: var(--dark-grey);
+  color: var(--light-grey);
+}
