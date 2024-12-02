@@ -11,7 +11,7 @@ const listElement = document.querySelector(".product-list");
 
 const productData = new ExternalServices();
 
-const productList = new ProductList(category, ProductData, listElement);
+const productList = new ProductList(category, productData, listElement);
 
 document.getElementById("title-products").innerHTML =
   `Top Products: ${category.charAt(0).toUpperCase() + category.slice(1)}`;
