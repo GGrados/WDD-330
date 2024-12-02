@@ -6,7 +6,7 @@ function convertToJson(res) {
   }
 }
 const baseURL =
-  import.meta.env.VITE_SERVER_URL ?? "https://wdd330-backend.onrender.com/checkout";
+  import.meta.env.VITE_SERVER_URL ?? "https://wdd330-backend.onrender.com/";
 
   export default class ExternalServices {
   async getData(category) {
