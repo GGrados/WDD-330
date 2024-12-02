@@ -97,7 +97,11 @@ export function renderWithTemplate(
   parentElement,
   dataSource,
   callback,
+  empty = false
 ) {
+  if (empty){
+    parentElement.innerHTML = "";
+  }
   parentElement.insertAdjacentHTML("afterbegin", templateFn);
   if (callback) {
     callback(dataSource);
@@ -119,7 +123,8 @@ export async function loadHeaderAndFooter() {
     document.getElementById("main-header"),
     ".cart",
     getMenucartLogo,
+    true
   );
 
-  renderWithTemplate(templateFooter, document.getElementById("main-footer"));
+  renderWithTemplate(templateFooter, document.getElementById("main-footer"),null,null,true);
 }
