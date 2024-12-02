@@ -1,4 +1,4 @@
-import { getLocalStorage, setLocalStorage } from "./utils.mjs";
+import { getLocalStorage, getMenucartLogo, setLocalStorage } from "./utils.mjs";
 
 function productDetailsTemplate(product) {
   return `<section class="product-detail"> <h3>${product.Brand.Name}</h3>
@@ -18,6 +18,18 @@ function productDetailsTemplate(product) {
     </div></section>`;
 }
 
+function animation() {
+  const cartThumbnail = document.querySelector(".cart");
+
+  // Add animation class
+  cartThumbnail.classList.add("animate");
+
+  // Remove animation class after animation ends
+  cartThumbnail.addEventListener("animationend", function () {
+    cartThumbnail.classList.remove("animate");
+  });
+}
+
 export default class ProductDetails {
   constructor(productId, dataSource) {
     this.productId = productId;
@@ -30,7 +42,7 @@ export default class ProductDetails {
     // once we have the product details we can render out the HTML
     this.renderProductDetails("main");
     // once the HTML is rendered we can add a listener to Add to Cart button
-    // Notice the .bind(this). Our callback will not work if we don't include that line. Review the readings from this week on 'this' to understand why.
+    // Notice the .bind(this). Our callback will not work if we don't include that line. Review the readings from this week on 'this' to understand why
     document
       .getElementById("addToCart")
       .addEventListener("click", this.addToCart.bind(this));
@@ -39,8 +51,8 @@ export default class ProductDetails {
     const products = getLocalStorage("so-cart") || [];
     products.push(this.product);
     setLocalStorage("so-cart", products);
-    alert("Item added to cart!!!");
-    location.reload();
+    animation();
+    getMenucartLogo(".cart");
   }
   renderProductDetails(selector) {
     const element = document.querySelector(selector);
