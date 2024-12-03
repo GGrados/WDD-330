@@ -348,3 +348,17 @@ footer {
 .cart-card button:active {
   background-color: var(--primary-color);
 }
+
+/* alert styles */
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  margin: 0.5rem 0;
+}
+
+.alert>p {
+  margin: 0;
+}

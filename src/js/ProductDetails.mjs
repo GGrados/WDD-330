@@ -1,4 +1,4 @@
-import { getLocalStorage, getMenucartLogo, setLocalStorage } from "./utils.mjs";
+import { alertMessage, getLocalStorage, getMenucartLogo, setLocalStorage } from "./utils.mjs";
 
 function productDetailsTemplate(product) {
   return `<section class="product-detail"> <h3>${product.Brand.Name}</h3>
@@ -53,6 +53,7 @@ export default class ProductDetails {
     setLocalStorage("so-cart", products);
     animation();
     getMenucartLogo(".cart");
+    alertMessage("Item Added");
   }
   renderProductDetails(selector) {
     const element = document.querySelector(selector);

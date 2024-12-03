@@ -1,8 +1,9 @@
-function convertToJson(res) {
+async function convertToJson(res) {
+  const response = await res.json();
   if (res.ok) {
-    return res.json();
+    return response;
   } else {
-    throw new Error("Bad Response");
+    throw { name: "ExternalServiceError", message: response };
   }
 }
 const baseURL =
